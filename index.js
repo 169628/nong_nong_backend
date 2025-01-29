@@ -1,7 +1,7 @@
 // Main Server File
 
 const Koa = require("koa");
-require("dotenv").config({ path: "./config/local.env" });
+require("dotenv").config();
 const bodyParser = require("koa-parser");
 
 // apis
