@@ -3,6 +3,7 @@
 const Koa = require("koa");
 require("dotenv").config();
 const bodyParser = require("koa-parser");
+const cors = require("cors");
 
 // apis
 const users = require("./src/router/users.route");
@@ -15,6 +16,7 @@ const PORT = process.env.NODE_ENV == "dev" ? 3000 : process.env.PORT;
 
 // Parsing Body : middleware
 app.use(bodyParser());
+app.use(cors());
 
 // Adding All Routes to App instance
 app.use(users.routes());
