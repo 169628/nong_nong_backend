@@ -3,7 +3,7 @@
 const Koa = require("koa");
 require("dotenv").config();
 const bodyParser = require("koa-parser");
-const cors = require("cors");
+const cors = require("@koa/cors");
 
 // apis
 const users = require("./src/router/users.route");
